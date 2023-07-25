@@ -1,8 +1,10 @@
 import 'package:booklyapp/core/utils/assets.dart';
+import 'package:booklyapp/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget{
-  SplashViewBody({super.key});
+  const SplashViewBody({super.key});
 
   @override
   State<SplashViewBody> createState() => _SplashViewBodyState();
@@ -18,6 +20,15 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   void initState() {
     super.initState();
     createSlidingAnimation();
+
+    // navigate to home view.
+    navigateToHomeView();
+  }
+
+  void navigateToHomeView() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(const HomeView(), transition: Transition.leftToRight, duration: const Duration(microseconds: 500));
+    },);
   }
   // create animation for text widget.
   void createSlidingAnimation() {
