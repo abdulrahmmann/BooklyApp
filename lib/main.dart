@@ -25,10 +25,3 @@ class BooklyApp extends StatelessWidget {
   }
 }
 
-/*
-final customTheme = ThemeData(
-  fontFamily: 'YourDesiredFontFamily', // Replace with the font family you want to use
-  brightness: Brightness.dark, // Set the brightness to dark to enable dark mode
-  scaffoldBackgroundColor: Colors.grey[900], // Set the background color for the scaffold
-  // Add more theme properties here if needed
- */
