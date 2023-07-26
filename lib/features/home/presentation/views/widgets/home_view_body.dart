@@ -1,13 +1,9 @@
 import 'package:booklyapp/core/utils/assets.dart';
 import 'package:booklyapp/core/utils/styles.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/best_seller_list_view.dart';
-import 'package:booklyapp/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:booklyapp/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/featured_list_view.dart';
-import 'package:booklyapp/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

@@ -7,4 +7,5 @@ class AssetsData {
 
   static const appbarSearchIcon = 'assets/images/searchx1.png';
 
+
 }
