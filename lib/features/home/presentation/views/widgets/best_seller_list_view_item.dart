@@ -1,13 +1,12 @@
 
 import 'package:booklyapp/core/utils/app_routers.dart';
 import 'package:booklyapp/core/utils/styles.dart';
-import 'package:booklyapp/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:booklyapp/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
