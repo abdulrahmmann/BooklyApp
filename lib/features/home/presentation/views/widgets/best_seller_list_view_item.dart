@@ -1,6 +1,8 @@
 
 import 'package:booklyapp/core/utils/app_routers.dart';
 import 'package:booklyapp/core/utils/styles.dart';
+import 'package:booklyapp/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
+import 'package:booklyapp/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -46,14 +48,14 @@ class BestSellerItem extends StatelessWidget {
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(height: 2),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         '19.99 €',
-                        style: Styles.textStyle20Bold,
+                        style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),
                       ),
-                      BookRating(),
+                      const BookRating(),
                     ],
                   )
                 ],
@@ -66,35 +68,5 @@ class BestSellerItem extends StatelessWidget {
   }
 }
 
-class BookRating extends StatelessWidget {
-  const BookRating({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
-          Icons.star,
-          color: Color(0xffFFDD4F),
-        ),
-        const SizedBox(
-          width: 6.3,
-        ),
-        const Text(
-          '4.8',
-          style: Styles.textStyle16,
-        ),
-        const SizedBox(
-          width: 9,
-        ),
-        Text(
-          '(2390)',
-          style: Styles.textStyle14.copyWith(
-              fontWeight: FontWeight.normal, color: const Color(0xff707070)),
-        ),
-      ],
-    );
-  }
-}
 
 
