@@ -17,6 +17,5 @@ class FeaturedBooksSuccess extends FeaturedBooksState {
   final List<BookModel> books;
 
   FeaturedBooksSuccess(this.books);
-
 }
 
