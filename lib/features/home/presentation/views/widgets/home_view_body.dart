@@ -11,40 +11,48 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
-            child: Padding(
-          padding: EdgeInsets.only(top: 44, right: 30, left: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // custom app bar.
-              CustomAppBar(
-                leftIconAsset: AssetsData.appbarLogo,
-                rightIconAsset: AssetsData.appbarSearchIcon,
-              ),
-              SizedBox(height: 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // custom app bar.
+                SizedBox(height: 44,),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: CustomAppBar(
+                    leftIconAsset: AssetsData.appbarLogo,
+                    rightIconAsset: AssetsData.appbarSearchIcon,
+                  ),
+                ),
+                SizedBox(height: 32),
+                // list of books -> ListView Horizontally.
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: FeaturedBooksListView(),
+                ),
+                SizedBox(height: 40),
 
-              // list of books -> ListView Horizontally.
-              FeaturedListView(),
-              SizedBox(height: 40),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: Text(
+                    'Newest Books',
+                    style: Styles.textStyle18,
+                  ),
+                ),
 
-              Text(
-                'Best Seller',
-                style: Styles.textStyle18,
-              ),
-
-              SizedBox(height: 20),
-            ],
-          ),
-        )),
-        SliverToBoxAdapter(
+                SizedBox(height: 20),
+              ],
+            )),
+        SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: BestSellerListView(),
           ),
-        )
+        ),
       ],
     );
   }
 }
+

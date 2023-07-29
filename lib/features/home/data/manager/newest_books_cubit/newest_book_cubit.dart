@@ -1,8 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:booklyapp/features/home/data/model/BookModel.dart';
 import 'package:booklyapp/features/home/data/repository/home_repository.dart';
-import 'package:meta/meta.dart';
-
 part 'newest_book_state.dart';
 
 class NewestBookCubit extends Cubit<NewestBookState> {
