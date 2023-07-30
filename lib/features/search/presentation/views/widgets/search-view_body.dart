@@ -83,7 +83,8 @@ class SearchResultListView extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder: (context, i) => const Padding(
             padding: EdgeInsets.only(bottom: 20),
-            child: BookListViewItem(),
+            child: Text('comment at now!'),
+            // child: BookListViewItem(bookModel: ),
           )),
     );
   }
